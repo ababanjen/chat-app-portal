@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import queryString from 'query-string'
 import io from 'socket.io-client'
 
-const BaseWrapper = ({children, history:{push}, location:{pathname, search}}) => {
+const BaseWrapper = ({children, history:{push}, location:{pathname, search}, key}) => {
     const handleLogout = (event) => {
         const ENDPOINT = 'localhost:8080'
         const query = search
@@ -18,7 +18,7 @@ const BaseWrapper = ({children, history:{push}, location:{pathname, search}}) =>
         })
     }
     return(
-        <div className="chat-container">
+        <div className="chat-container" key={key}>
             <div className="text-container">
                     <span className="header-title">Chat app</span>
                     {pathname !== '/' && (

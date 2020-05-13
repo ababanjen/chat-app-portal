@@ -41,7 +41,7 @@ const Chat = ({location, history:{push}}) => {
 
     const sendMessage = (event) => {
         event.preventDefault()
-        if(message) {
+        if(message.match(/^ *$/) === null) {
             socket.emit('sendMessage', message, () => {
                 setMessage('')
             })
@@ -58,7 +58,7 @@ const Chat = ({location, history:{push}}) => {
     }
     
     return(
-        <BaseWrapper>
+        <BaseWrapper key="chat">
                 <Messeges messages={messages} user={queryString.parse(query)}/>
                 <div className="text-container">
                     <input type="text" 

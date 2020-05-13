@@ -29,11 +29,12 @@
     margin: 5px;
 }
 .text-msg-container.admin {
-    width: 85%;
-    border-radius: 0;
-    background-color: #eaeaea;
-    color: #a99f9f;
-    margin: 10px;
+  font-size: 12px;
+  width: 90%;
+  background-color: transparent;
+  color: #a99f9f;
+  margin: 0px;
+  text-align: center;
 }
 .arrow{
     background-color: #88e306;

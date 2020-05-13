@@ -29,7 +29,7 @@ const Signin = ({history:{push}}) => {
         return alert('All fields are required')
     }
     return (
-        <BaseWrapper>
+        <BaseWrapper key="signin">
             <div className="join-outer-container">
                     <div>
                         <input placeholder="User name" className="input-msg form" type="text" onChange={(event)=>handleOnChange(event)}
