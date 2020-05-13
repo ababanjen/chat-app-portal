@@ -26,7 +26,7 @@ const Chat = ({location, history:{push}}) => {
         })
         socket = io(ENDPOINT)
         socket.emit('join', queryStrings, (err) => {
-            if(err) {//fake session checker
+            if(err) {
                 alert(err.message)
                 push('/')
             }

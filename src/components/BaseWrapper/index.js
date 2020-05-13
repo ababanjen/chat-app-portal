@@ -1,9 +1,21 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
+import queryString from 'query-string'
+import io from 'socket.io-client'
 
-const BaseWrapper = ({children, history:{push}, location:{pathname}}) => {
+const BaseWrapper = ({children, history:{push}, location:{pathname, search}}) => {
     const handleLogout = (event) => {
-        push('/')//fake logout
+        const ENDPOINT = 'localhost:8080'
+        const query = search
+        const queryStrings = queryString.parse(query)
+        const socket = io(ENDPOINT)
+        socket.emit('leave', queryStrings, (err) => {
+            if(err) {//fake session checker
+                alert(err.message)
+                return
+            }
+            push('/')
+        })
     }
     return(
         <div className="chat-container">
