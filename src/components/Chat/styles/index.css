@@ -36,6 +36,9 @@
   margin: 0px;
   text-align: center;
 }
+.text-container.chat {
+  border-bottom: 0;
+}
 .arrow{
     background-color: #88e306;
     width: 20px;

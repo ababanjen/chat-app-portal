@@ -60,7 +60,7 @@ const Chat = ({location, history:{push}}) => {
     return(
         <BaseWrapper key="chat">
                 <Messeges messages={messages} user={queryString.parse(query)}/>
-                <div className="text-container">
+                <div className="text-container chat">
                     <input type="text" 
                     className="input-msg"
                     value={message} 
