@@ -1,0 +1,123 @@
+.message-box-container{
+    border-bottom: 1px solid #e0e6ea;
+    overflow: scroll;
+    width: 100%;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.user-msg{
+    margin: 5px;
+}
+.user-msg.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+.user-msg.left {
+    float: left;
+    clear: right;
+}
+.text-msg-container{
+    width: 40%;
+    background-color: #88e306;
+    height: auto;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    margin: 5px;
+}
+.text-msg-container.admin {
+    width: 85%;
+    border-radius: 0;
+    background-color: #eaeaea;
+    color: #a99f9f;
+    margin: 10px;
+}
+.arrow{
+    background-color: #88e306;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    -ms-transform: rotate(20deg);
+    transform: rotate(45deg);
+}
+.arrow.self{
+    margin-right: 1rem;
+    margin-top: -46px;
+    margin-left: 1rem;
+    float: right;
+}
+.arrow.friend {
+    margin-right: 1rem;
+    margin-top: -46px;
+    margin-left: 1rem;
+    float: left;
+}
+.chat-bubble-container {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+  
+  .chat-bubble {
+    padding: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    width: auto;
+    max-width: 300px;
+    word-wrap: break-word;
+    max-width: 200px;
+  }
+  .user-name {
+    position: absolute;
+    bottom: -22px;
+    color: #647787;
+  }
+  .user-name.self {
+    right: 1rem;
+  }
+  .user-name.friend {
+    left: 1rem;
+  }
+  .msg-friend {
+    color: white;
+    background-color: #88e306;
+    margin-left:1rem;
+    margin-right: auto;
+    z-index: 10;
+
+  }
+  
+  .msg-self {
+    color: white;
+    background-color: #88e306;
+    margin-right:1rem;
+    margin-left: auto;
+    z-index: 10;
+  }
+
+
+  /* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6d6a6a; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #636262; 
+  }
