@@ -8,22 +8,22 @@ const Messages = ({messages, user}) => {
     return(
         <ScrollToBottom className="message-box-container" >
             {messages.map((data,i) => {
-                const isAdmin = data.user === 'admin'
-                const isSender = match(data.user,user.name)
+                const isAdmin = data.user_name === 'admin'
+                const isSender = match(data.user_name,user.name)
                 const isSenderClass = isSender ? 'self' : 'friend'
                 return(
                 <div key={`${data.id}${i}`}>  
                     {
                         isAdmin ?
-                            !match(data.name,user.name) && <div className={`text-msg-container admin`} >{data.text}</div>
+                            <div className={`text-msg-container admin`} >{data.message}</div>
                         :
                         <div className="row no-gutters" >
                             <div className="chat-bubble-container ">
                                 <div className={`chat-bubble msg-${isSenderClass}`}>
-                                    {data.text}
+                                    {data.message}
                                 </div>
                                 <p className={`user-name ${isSenderClass}`}>
-                                    {isSender ? 'You': data.user}
+                                    {isSender ? 'You': data.user_name}
                                 </p>
                             </div>
                             <div className={`arrow ${isSenderClass}`}/>
